@@ -32,6 +32,7 @@ header .logo-container img{
 }
 
 header .book-btn{
+    display: inline-block;
     margin: 20px 0;
     padding: 5px 32px;
     font-size: 20px;
@@ -66,6 +67,43 @@ section{
 
 .baby-sure-center a{
     margin: 20px 20px;
+    padding: 5px 32px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #000;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* #contact-section{
+    : 100px 0;
+} */
+
+#contact-section h1{
+    margin: 100px 0;
+}
+
+#contact-form{
+    padding: 40px 80px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #000;
+    border-radius: 10px;
+}
+
+#contact-form label{
+    margin: 20px 0 10px 0;
+    font-size: 20px;
+}
+
+#contact-form input{
+    margin: 0 20px 0 0;
+    height: 40px;
+}
+
+#contact-form button{
+    margin: 40px 0;
     padding: 5px 32px;
     font-size: 20px;
     color: #fff;
