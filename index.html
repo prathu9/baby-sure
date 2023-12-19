@@ -12,50 +12,54 @@
       rel="stylesheet"
     />
   </head>
-  <body>
-    <header>
+  <body class="no-scroll">
+    <header id="header">
       <div class="logo-container">
         <img src="./assets/baby-sure.jpg" alt="logo" />
       </div>
       <div>
         <h1>Welcome to Babysure IVF Fertility Clinic</h1>
         <h2>Book your free IVF consultation</h2>
-        <a class="book-btn" href="#book-consult">
-            FREE
-        </a>
+        <button class="book-btn">FREE</button>
       </div>
     </header>
     <section id="book-consult">
-        <div class="baby-sure-ivf">
-            <h1>
-                Babysure IVF
-            </h1>
+      <button class="header-bck-btn">Back</button>
+      <div class="baby-sure-ivf">
+        <h1>Babysure IVF</h1>
+      </div>
+      <div class="baby-sure-center">
+        <h3>Choose the center</h3>
+        <div class="ivf-center-container">
+          <label class="ivf-center-location">
+            <span class="text">Pune</span>
+            <input type="radio" name="ivf-center" value="pune" />
+            <span class="active-location"></span>
+          </label>
+          <label class="ivf-center-location">
+            <span class="text">Nagpur</span>
+            <input type="radio" name="ivf-center" value="nagpur" />
+            <span class="active-location"></span>
+          </label>
+          <label class="ivf-center-location">
+            <span class="text">Thane</span>
+            <input type="radio" name="ivf-center" value="thane" />
+            <span class="active-location"></span>
+          </label>
         </div>
-        <div class="baby-sure-center">
-            <h3>
-                Choose the center
-            </h3>
-            <div class="center-container">
-                <a href="#contact-section" class="ivf-center-location"
-                  data-ivf-center="pune">Pune</a>
-                <a href="#contact-section" class="ivf-center-location"
-                data-ivf-center="nagpur">Nagpur</a>
-                <a href="#contact-section" class="ivf-center-location"
-                  data-ivf-center="thane">Thane</a>
-            </div>
-        </div>
+      </div>
     </section>
     <section id="contact-section">
-        <h1>Contact Information</h1>
-        <form id="contact-form">
-            <label for="name">Full name</label>
-            <input name="name"/>
-            <label for="number">Phone number</label>
-            <input name="number" />
-            <button>Submit</button>
-        </form>
+      <button class="book-btn">Back</button>
+      <h1>Contact Information</h1>
+      <form id="contact-form">
+        <label for="name">Full name</label>
+        <input name="name" />
+        <label for="number">Phone number</label>
+        <input name="number" />
+        <button>Submit</button>
+      </form>
     </section>
-
     <script src="./script.js"></script>
   </body>
 </html>

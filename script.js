@@ -13,18 +13,37 @@
       number: [9, 3, 9, 3, 0, 5, 0, 5, 0, 5].join(""),
     },
   });
-  console.log(places);
-  const ivfCenterBtn = document.querySelectorAll(".ivf-center-location");
 
   const formData = {
     name: "",
-    phoneNumber: "", //pattern="((\+*)((0[ -]*)*|((91 )*))((\d{12})+|(\d{10})+))|\d{5}([- ]*)\d{6}"
+    phoneNumber: "", 
     center: places.pune.name,
   };
 
+  const bookBtn = document.querySelectorAll(".book-btn");
+  const headerBckBtn = document.querySelectorAll(".header-bck-btn");
+  const ivfCenterBtn = document.querySelectorAll(".ivf-center-location");
+
+  const headerSection = document.querySelector("#header");
+  const bookConcultSection = document.querySelector("#book-consult");
+  const formSection = document.querySelector("#contact-section");
+
+  headerBckBtn.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        scrollToSection(headerSection.offsetTop);
+    })
+  })
+
+  bookBtn.forEach((btn) => {
+    btn.addEventListener("click", () => {
+    scrollToSection(bookConcultSection.offsetTop);
+  })})
+
   ivfCenterBtn.forEach((ivfCenter) => {
-    ivfCenter.addEventListener("click", () => {
-      formData.center = ivfCenter.getAttribute("data-ivf-center");
+    ivfCenter.addEventListener("click", (e) => {
+      formData.center = e.target.value;
+      console.log(formData)
+      scrollToSection(formSection.offsetTop)
     });
   });
 
@@ -44,3 +63,12 @@
 
   form.addEventListener("submit", handleFormSubmit);
 })();
+
+const scrollToSection = (top) => {
+    if(!isNaN(top)){
+        window.scrollTo({
+            top,
+            behavior: 'smooth'
+        })
+    }
+}

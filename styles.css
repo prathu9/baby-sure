@@ -5,9 +5,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
+/*e3058c 2558a9 96b3e2*/
 html{
     scroll-behavior: smooth;
+}
+
+.no-scroll{
+    overflow: hidden;
 }
 
 header{
@@ -18,6 +22,7 @@ header{
     align-items: center;
     flex-direction: column;
     text-align: center;
+    transform: height 450ms ease-in;
 }
 
 header .logo-container{
@@ -51,7 +56,21 @@ section{
 }
 
 #book-consult{
+    position: relative;
     text-align: center;
+}
+
+#book-consult .header-bck-btn{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 5px 32px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #000;
+    cursor: pointer;
+    text-decoration: none;
+    user-select: none;
 }
 
 #book-consult .baby-sure-ivf{
@@ -62,7 +81,7 @@ section{
     margin: 100px 0 0 20px;
 }
 
-.center-container{
+.ivf-center-container{
     margin: 40px 0;
     display: flex;
     justify-content: center;
@@ -70,8 +89,58 @@ section{
     flex-wrap: wrap;
 }
 
-.baby-sure-center a{
+.ivf-center-location{
+    position: relative;
+    cursor: pointer;
     margin: 20px 20px;
+}
+
+.ivf-center-location .text{
+    padding: 10px 32px;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    user-select: none;
+    border-radius: 10px;
+}
+
+.ivf-center-location input{
+    position: absolute;
+    opacity: 0;
+}
+
+.ivf-center-location .active-location{
+    width: 100%;
+    height: 100%;
+    padding: 25px 32px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2);
+    border: 5px solid transparent;
+    border-radius: 10px;
+    transition: all 250ms ease-in-out;
+}
+
+.ivf-center-location input:checked ~ .active-location{
+    border: 5px solid #000;
+}
+
+#contact-section{
+    position: relative;
+}
+
+#contact-section h1{
+    margin: 100px 0;
+}
+
+#contact-section .book-btn{
+    position: absolute;
+    top: 20px;
+    left: 20px;
     padding: 5px 32px;
     font-size: 20px;
     color: #fff;
@@ -79,14 +148,6 @@ section{
     cursor: pointer;
     text-decoration: none;
     user-select: none;
-}
-
-/* #contact-section{
-    : 100px 0;
-} */
-
-#contact-section h1{
-    margin: 100px 0;
 }
 
 #contact-form{
