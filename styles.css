@@ -40,6 +40,7 @@ header .book-btn{
     background-color: #000;
     cursor: pointer;
     text-decoration: none;
+    user-select: none;
 }
 
 section{
@@ -77,6 +78,7 @@ section{
     background-color: #000;
     cursor: pointer;
     text-decoration: none;
+    user-select: none;
 }
 
 /* #contact-section{
