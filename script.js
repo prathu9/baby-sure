@@ -35,9 +35,7 @@
 
     let url = `https://wa.me/${[9, 1, 9, 2, 8, 4, 1, 4, 9, 9, 5, 8].join(
       ""
-    )}?text=
-      Name: ${formData.name}%0aPhone number: ${formData.phoneNumber}%0a
-      Center: ${formData.center}%0a%0aThis message sent from wa link`;
+    )}?text=Name: ${formData.name}%0aPhone number: ${formData.phoneNumber}%0aCenter: ${formData.center}%0a%0aThis message sent from wa link`;
     console.log(formData);
     window.open(url, "_blank").focus();
   };
