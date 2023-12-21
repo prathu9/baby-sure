@@ -42,7 +42,6 @@
   ivfCenterBtn.forEach((ivfCenter) => {
     ivfCenter.addEventListener("click", (e) => {
       formData.center = e.target.value;
-      console.log(formData)
       scrollToSection(formSection.offsetTop)
     });
   });
