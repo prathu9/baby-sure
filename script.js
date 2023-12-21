@@ -17,7 +17,7 @@
   const formData = {
     name: "",
     phoneNumber: "", 
-    center: places.pune.name,
+    center: places.pune.name.toLowerCase(),
   };
 
   const bookBtn = document.querySelectorAll(".book-btn");
@@ -57,10 +57,8 @@
       formData.phoneNumber = formData.phoneNumber.slice(additionalNum);
     }
     formData.phoneNumber = '+91-'+formData.phoneNumber;
-    let url = `https://wa.me/${[9, 1, 9, 2, 8, 4, 1, 4, 9, 9, 5, 8].join(
-      ""
-    )}?text=Name: ${formData.name}%0aPhone number: ${formData.phoneNumber}%0aCenter: ${formData.center}`;
-    
+    let url = `https://wa.me/${places[formData.center].number}?text=Name: ${formData.name}%0aPhone number: ${formData.phoneNumber}%0aCenter: ${formData.center}`;
+
     window.open(url, "_blank").focus();
   };
 
