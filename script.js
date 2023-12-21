@@ -56,7 +56,7 @@
       const additionalNum = phoneNumberLen - 10;
       formData.phoneNumber = formData.phoneNumber.slice(additionalNum);
     }
-    formData.phoneNumber = '+91-'+formData.phoneNumber;
+    formData.phoneNumber = '%2b91-'+formData.phoneNumber;
     let url = `https://wa.me/${places[formData.center].number}?text=Name: ${formData.name}%0aPhone number: ${formData.phoneNumber}%0aCenter: ${formData.center}`;
 
     window.open(url, "_blank").focus();
