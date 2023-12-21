@@ -49,11 +49,15 @@ header .book-btn{
 }
 
 section{
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-image: url("./assets/desktop-bg.png");
+    position: absolute;
+    top: 100%;
+    transition: all 450ms ease-in-out;
 }
 
 @media screen and (max-width: 458px){
@@ -63,8 +67,8 @@ section{
 }
 
 #book-consult{
-    position: relative;
     text-align: center;
+    z-index: 10;
 }
 
 #book-consult .header-bck-btn{
@@ -137,7 +141,8 @@ section{
 }
 
 #contact-section{
-    position: relative;
+    /* position: relative; */
+    z-index: 20;
 }
 
 #contact-section .logo-container{

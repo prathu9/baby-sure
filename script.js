@@ -25,24 +25,30 @@
   const ivfCenterBtn = document.querySelectorAll(".ivf-center-location");
 
   const headerSection = document.querySelector("#header");
-  const bookConcultSection = document.querySelector("#book-consult");
+  const bookConsultSection = document.querySelector("#book-consult");
   const formSection = document.querySelector("#contact-section");
 
   headerBckBtn.forEach((btn) => {
     btn.addEventListener("click", () => {
-        scrollToSection(headerSection.offsetTop);
+       popupSection(btn.parentElement, false);
     })
   })
 
   bookBtn.forEach((btn) => {
     btn.addEventListener("click", () => {
-    scrollToSection(bookConcultSection.offsetTop);
+    if(btn.parentElement === formSection){
+      popupSection(formSection, false);
+    }
+    else{
+      popupSection(bookConsultSection, true);
+    }
+    
   })})
 
   ivfCenterBtn.forEach((ivfCenter) => {
     ivfCenter.addEventListener("click", (e) => {
       formData.center = e.target.value;
-      scrollToSection(formSection.offsetTop)
+      popupSection(formSection, true)
     });
   });
 
@@ -67,11 +73,12 @@
   form.addEventListener("submit", handleFormSubmit);
 })();
 
-const scrollToSection = (top) => {
-    if(!isNaN(top)){
-        window.scrollTo({
-            top,
-            behavior: 'smooth'
-        })
-    }
+
+const popupSection = (sectionElem, showElem) => {
+  if(showElem){
+    sectionElem.style.transform="translateY(-100%)"
+  }
+  else{
+    sectionElem.style.transform="translateY(0%)"
+  }
 }
