@@ -64,8 +64,8 @@ section{
     position: absolute;
     top: 20px;
     left: 20px;
-    padding: 5px 32px;
-    font-size: 20px;
+    padding: 5px 20px;
+    font-size: 15px;
     color: #fff;
     background-color: #000;
     cursor: pointer;
@@ -141,8 +141,8 @@ section{
     position: absolute;
     top: 20px;
     left: 20px;
-    padding: 5px 32px;
-    font-size: 20px;
+    padding: 5px 20px;
+    font-size: 15px;
     color: #fff;
     background-color: #000;
     cursor: pointer;
