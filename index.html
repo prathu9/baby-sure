@@ -57,9 +57,9 @@
       <h1>Contact Information</h1>
       <form id="contact-form">
         <label for="name">Full name</label>
-        <input name="name" />
+        <input name="name" minlength="2" pattern="[A-Za-z]{1,32}" required />
         <label for="number">Phone number</label>
-        <input name="number" />
+        <input name="number" pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$" required />
         <button>Submit</button>
       </form>
     </section>
