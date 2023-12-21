@@ -25,12 +25,12 @@ header{
     transform: height 450ms ease-in;
 }
 
-header .logo-container{
+.logo-container{
     width: 250px;
     justify-self: flex-start;
 }
 
-header .logo-container img{
+.logo-container img{
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -80,7 +80,7 @@ section{
     user-select: none;
 }
 
-#book-consult .baby-sure-ivf{
+#book-consult .logo-container{
     margin: 100px 0 0 0;
 }
 
@@ -140,8 +140,12 @@ section{
     position: relative;
 }
 
+#contact-section .logo-container{
+    margin: 20px 0 0 0;
+}
+
 #contact-section h1{
-    margin: 100px 0 40px 0;
+    margin: 10px 0 40px 0;
 }
 
 #contact-section .book-btn{
