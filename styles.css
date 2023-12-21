@@ -197,7 +197,24 @@ section{
 }
 
 @media screen and (max-width: 472px){
+    #book-consult .logo-container,
+    .baby-sure-center{
+        margin: 50px 0 0 0;
+    }
+
     #contact-form{
+        width: 320px;
         padding: 40px 20px;
     }
+
+    #book-consult .header-bck-btn,
+    #contact-section .book-btn{
+        top: 5px;
+        left: 5px;
+    }
+    
+    #contact-section h1{
+        margin: 10px 0 10px 0;
+    }
+    
 }
