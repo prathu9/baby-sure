@@ -21,6 +21,7 @@ window.onload = () => {
   const formData = {
     name: "",
     phoneNumber: "", 
+    date: "",
     center: places.pune.name.toLowerCase(),
   };
 
@@ -54,6 +55,7 @@ window.onload = () => {
     e.preventDefault();
     formData.name = e.target[0].value;
     formData.phoneNumber = e.target[1].value;
+    formData.date = e.target[2].value;
 
     const phoneNumberLen = formData.phoneNumber.length;
     if(phoneNumberLen > 10){
@@ -61,7 +63,7 @@ window.onload = () => {
       formData.phoneNumber = formData.phoneNumber.slice(additionalNum);
     }
     formData.phoneNumber = '%2b91-'+formData.phoneNumber;
-    let url = `https://wa.me/${places[formData.center].number}?text=Name: ${formData.name}%0aPhone number: ${formData.phoneNumber}%0aCenter: ${formData.center}`;
+    let url = `https://wa.me/${places[formData.center].number}?text=Name: ${formData.name}%0aPhone number: ${formData.phoneNumber}%0aDate: ${formData.date}%0aCenter: ${formData.center}`;
 
     window.open(url, "_blank").focus();
   };
