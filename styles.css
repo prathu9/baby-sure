@@ -171,20 +171,14 @@ section{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url("./assets/desktop-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-@media screen and (max-width: 458px){
-    section{
-        background-image: url("./assets/mobile-bg.png");
-    }
 }
 
 #book-consult{
     position: relative;
     text-align: center;
+    background-image: url("./assets/desktop-blue-bg.png");
 }
 
 #book-consult .header-bck-btn{
@@ -266,9 +260,16 @@ section{
     border: 5px solid #000;
 }
 
+@media screen and (max-width: 458px){
+    #book-consult{
+        background-image: url("./assets/mobile-blue-bg.png");
+    }
+}
+
 #contact-section{
     position: relative;
     overflow: auto;
+    background-image: url("./assets/desktop-bg.png");
 }
 
 #contact-section .logo-container{
@@ -390,4 +391,10 @@ section{
         font-size: 1.2rem;
     }
     
+}
+
+@media screen and (max-width: 458px){
+    #contact-section{
+        background-image: url("./assets/mobile-bg.png");
+    }
 }
