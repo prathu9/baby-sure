@@ -15,6 +15,7 @@ html{
 }
 
 header{
+    position: relative;
     height: 100vh;
     background-color: #f7f7f7;
     display: flex;
@@ -22,14 +23,16 @@ header{
     flex-direction: column;
     text-align: center;
     transform: height 450ms ease-in;
-    background-image: url("./assets/desktop-blue-bg.png");
+    background-color: #faa3a3;
+    background-image: url("./assets/desktop-img-bg.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-position: center bottom;
+    background-size: contain;
 }
 
 .logo-container{
-    margin: 40px 0 0 0;
-    width: 320px;
+    margin: 40px 0 20px 0;
+    width: 350px;
     justify-self: flex-start;
 }
 
@@ -39,34 +42,30 @@ header{
     object-fit: contain;
 }
 
+header .title{
+    position: absolute;
+    top: 40%;
+    left: calc(100% - 80%);
+}
+
 header h1{
-    font-size: 2.8rem;
+    font-size: 3.8rem;
 }
 
 header h2{
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 header h3{
     margin: 40px 0 0 0;
-    font-size: 1.5rem;
-}
-
-@media screen and (max-width: 458px){
-    section{
-        background-image: url("./assets/mobile-blue-bg.png");
-    }
-
-    header h3{
-        width: 280px;
-    }
+    font-size: 2rem;
 }
 
 header .book-btn{
     display: inline-block;
     margin: 20px 0;
-    padding: 5px 32px;
-    font-size: 20px;
+    padding: 10px 42px;
+    font-size: 2rem;
     color: #fff;
     background-color: #000;
     cursor: pointer;
@@ -76,6 +75,84 @@ header .book-btn{
     transform: scale(2);
     animation: scale 1.2s infinite ease-in-out;
 }
+
+@media screen and (max-width: 1294px){
+    header{
+        background-size: 1400px 80%;
+        background-position: right bottom;
+    }
+
+    header .title{
+        top: 40%;
+        left: calc(100% - 90%);
+    }
+}
+
+@media screen and (max-width: 970px){
+    header{
+        background-size: 1400px 80%;
+        background-position: right bottom;
+    }
+
+    header .title{
+        left: 5%;
+        transform: scale(0.8);
+    }
+}
+
+@media screen and (max-width: 785px){
+    header{
+        background-image: url("./assets/mobile-img-bg.png");
+        background-position: center bottom;
+        background-size: contain;
+    }
+
+    header .title{
+        top: 32%;
+        left: 2%;
+        transform: scale(0.8);
+        text-align: left;
+    }
+
+    header h3{
+        width: 280px;
+    }
+}
+
+@media screen and (max-width: 485px){
+    header{
+        background-image: url("./assets/mobile-img-bg.png");
+        background-position: center bottom;
+        background-size: contain;
+    }
+
+    header .title{
+        top: 32%;
+        left: 3.2%;
+        transform: scale(1);
+        text-align: left;
+    }
+
+    header h1{
+        font-size: 2.8rem;
+    }
+    
+    header h2{
+        font-size: 1.5rem;
+    }
+    
+    header h3{
+        margin: 40px 0 0 0;
+        font-size: 1.5rem;
+    }
+
+    header .book-btn{
+        margin: 20px 0;
+        padding: 8px 28px;
+        font-size: 1.2rem;
+    }
+}
+
 
 @keyframes scale{
     0%{
@@ -95,6 +172,8 @@ section{
     flex-direction: column;
     align-items: center;
     background-image: url("./assets/desktop-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 @media screen and (max-width: 458px){
@@ -112,8 +191,8 @@ section{
     position: absolute;
     top: 20px;
     left: 20px;
-    padding: 5px 20px;
-    font-size: 15px;
+    padding: 10px 42px;
+    font-size: 1.2rem;
     color: #fff;
     background-color: #000;
     cursor: pointer;
@@ -127,6 +206,10 @@ section{
 
 .baby-sure-center{
     margin: 100px 0 0 20px;
+}
+
+.baby-sure-center h2{
+    font-size: 2rem;
 }
 
 .ivf-center-container{
@@ -145,10 +228,10 @@ section{
 
 .ivf-center-location .text{
     display: inline-block;
-    padding: 10px 32px;
+    padding: 10px 42px;
     width: 100%;
     height: 100%;
-    font-size: 20px;
+    font-size: 2rem;
     color: #fff;
     background-color: #000;
     text-decoration: none;
@@ -169,7 +252,7 @@ section{
 .ivf-center-location .active-location{
     width: 100%;
     height: 100%;
-    padding: 25px 32px;
+    padding: 38px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -185,6 +268,7 @@ section{
 
 #contact-section{
     position: relative;
+    overflow: auto;
 }
 
 #contact-section .logo-container{
@@ -203,15 +287,16 @@ section{
 }
 
 #contact-section h1{
-    margin: 10px 0 40px 0;
+    margin: 80px 0 10px 0;
+    font-size: 2rem;
 }
 
 #contact-section .book-btn{
     position: absolute;
     top: 20px;
     left: 20px;
-    padding: 5px 20px;
-    font-size: 15px;
+    padding: 10px 42px;
+    font-size: 1.2rem;
     color: #fff;
     background-color: #000;
     cursor: pointer;
@@ -222,8 +307,8 @@ section{
 
 #contact-form{
     margin: 0 0 50px 0;
-    padding: 40px 80px;
-    max-width: 450px;
+    padding: 32px 50px;
+    max-width: 480px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -233,29 +318,36 @@ section{
 
 #contact-form label{
     margin: 20px 0 10px 0;
-    font-size: 20px;
+    font-size: 1.5rem;
 }
 
 #contact-form input{
-    margin: 0 20px 0 0;
+    margin: 0 0 10px 0;
     padding: 0 10px;
-    min-width:285px;
-    height: 40px;
+    min-width: 320px;
+    font-size: 1.5rem;
+    height: 48px;
     background: transparent;
     border-radius: 4px;
 }
 
 #contact-form button{
     margin: 40px 0;
-    padding: 5px 32px;
-    font-size: 20px;
+    padding: 10px 42px;
+    font-size: 1.6rem;
     color: #fff;
     background-color: #000;
     cursor: pointer;
     text-decoration: none;
+    animation: scale 1s infinite ease-in-out;
 }
 
 @media screen and (max-width: 472px){
+    #book-consult .logo-container,
+    #contact-section .logo-container{
+        width: 280px;
+    }
+
     #book-consult,
     #contact-section{
         overflow: auto;
@@ -267,7 +359,7 @@ section{
     }
 
     #contact-form{
-        width: 320px;
+        width: 90%;
         margin: 20px 0;
         padding: 20px;
     }
@@ -279,11 +371,23 @@ section{
     }
     
     #contact-section h1{
-        margin: 10px 0 10px 0;
+        margin: 40px 0 0 0;
+        font-size: 1.5rem;
+    }
+
+    #contact-form input{
+        width: 100%;
+        min-width: 80%;
     }
 
     #contact-form button{
         margin: 40px 0 20px 0;
+    }
+
+    #book-consult .header-bck-btn,
+    #contact-section .book-btn{
+        padding: 5px 32px;
+        font-size: 1.2rem;
     }
     
 }
