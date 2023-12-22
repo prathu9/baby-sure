@@ -262,7 +262,8 @@ section{
 
     #contact-form{
         width: 320px;
-        padding: 40px 20px;
+        margin: 50px 0;
+        padding: 20px;
     }
 
     #book-consult .header-bck-btn,
