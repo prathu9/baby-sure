@@ -23,10 +23,19 @@ header{
     flex-direction: column;
     text-align: center;
     transform: height 450ms ease-in;
+    background-image: url("./assets/desktop-blue-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media screen and (max-width: 458px){
+    section{
+        background-image: url("./assets/mobile-blue-bg.png");
+    }
 }
 
 .logo-container{
-    width: 250px;
+    width: 320px;
     justify-self: flex-start;
 }
 
@@ -46,6 +55,21 @@ header .book-btn{
     cursor: pointer;
     text-decoration: none;
     user-select: none;
+    box-shadow: 0 0 0 0 rgba(0,0,0,0.5);
+    transform: scale(2);
+    animation: scale 1.2s infinite ease-in-out;
+}
+
+@keyframes scale{
+    0%{
+        transform: scale(1.15);
+    }
+    50%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.15);
+    }
 }
 
 section{
@@ -99,7 +123,8 @@ section{
 .ivf-center-location{
     position: relative;
     cursor: pointer;
-    margin: 20px 20px;
+    margin: 20px 40px;
+    animation: scale 1.2s infinite ease-in-out;
 }
 
 .ivf-center-location .text{
@@ -142,6 +167,17 @@ section{
 
 #contact-section .logo-container{
     margin: 20px 0 0 0;
+    height: 150px;
+    position: relative;
+}
+
+#contact-section .logo-container img{
+    height: auto;
+    aspect-ratio: 1/1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -40%)
 }
 
 #contact-section h1{
