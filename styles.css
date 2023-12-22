@@ -27,12 +27,6 @@ header{
     background-size: cover;
 }
 
-@media screen and (max-width: 458px){
-    section{
-        background-image: url("./assets/mobile-blue-bg.png");
-    }
-}
-
 .logo-container{
     margin: 40px 0 0 0;
     width: 320px;
@@ -56,6 +50,16 @@ header h2{
 header h3{
     margin: 40px 0 0 0;
     font-size: 1.5rem;
+}
+
+@media screen and (max-width: 458px){
+    section{
+        background-image: url("./assets/mobile-blue-bg.png");
+    }
+
+    header h3{
+        width: 280px;
+    }
 }
 
 header .book-btn{
