@@ -281,5 +281,9 @@ section{
     #contact-section h1{
         margin: 10px 0 10px 0;
     }
+
+    #contact-form button{
+        margin: 40px 0 20px 0;
+    }
     
 }
