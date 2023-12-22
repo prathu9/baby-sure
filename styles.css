@@ -190,12 +190,12 @@ section{
 #contact-section .logo-container{
     margin: 20px 0 0 0;
     height: 150px;
+    min-height: 150px;
     position: relative;
 }
 
 #contact-section .logo-container img{
     height: auto;
-    aspect-ratio: 1/1;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -217,6 +217,7 @@ section{
     cursor: pointer;
     text-decoration: none;
     user-select: none;
+    z-index: 10;
 }
 
 #contact-form{
@@ -255,6 +256,11 @@ section{
 }
 
 @media screen and (max-width: 472px){
+    #book-consult,
+    #contact-section{
+        overflow: auto;
+    }
+
     #book-consult .logo-container,
     .baby-sure-center{
         margin: 50px 0 0 0;
